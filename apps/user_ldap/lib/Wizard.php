@@ -780,7 +780,7 @@ class Wizard extends LDAPUtility {
 	 * @throws \Exception
 	 */
 	private function detectGroupMemberAssoc() {
-		$possibleAttrs = array('uniqueMember', 'memberUid', 'member');
+		$possibleAttrs = array('uniqueMember', 'memberUid', 'member', 'gidNumber');
 		$filter = $this->configuration->ldapGroupFilter;
 		if(empty($filter)) {
 			return false;
